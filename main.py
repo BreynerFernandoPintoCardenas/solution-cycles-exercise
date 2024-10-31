@@ -1,13 +1,13 @@
-for j in range(1, 11):
-    print(f"{j:2}", end=" ")  
+# Solicitar al usuario que ingrese un número entero
+numero = int(input("Ingrese un número: "))
 
-for i in range(1, 11):
-    
-    print(f"{i:2}", end=" ")  
-    
-    for j in range(1, 11):
-        value = i * j  
-        print(f"{value:2}", end=" ")  
-    
-    print() 
+# Inicializar una lista para almacenar los divisores
+divisores = []
 
+# Iterar desde 1 hasta el número ingresado (inclusive)
+for i in range(1, numero + 1):
+    if numero % i == 0:  # Comprobar si 'i' es un divisor de 'numero'
+        divisores.append(i)  # Agregar 'i' a la lista de divisores
+
+# Imprimir los divisores
+print("Los divisores son:", " ".join(map(str, divisores)))
