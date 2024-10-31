@@ -1,9 +1,10 @@
 numeros=int(input("ingrese un numero: "))
-
+tipo=2
+numerosTwo=numeros+1
 i=1
 
-for i in range(1, 11):
+for i in range(numerosTwo):
 
-    value=(i*numeros)
+    value=(2**i)
 
-    print(f"*{numeros}*{i}={value}")
+    print(value)
