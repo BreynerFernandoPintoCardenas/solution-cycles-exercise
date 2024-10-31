@@ -1,19 +1,10 @@
-def calcular_tiempo_viaje():
-    tiempo_total = 0
+cantidad=int(input("ingrese la cantidad de tramos que realizo: "))
+timpoT=0
+for i in range(cantidad):
+    tramo=float(input("ingrese la duracion del tramo: "))
+    timpoT+=tramo
 
-    while True:
-        duracion_tramo = int(input("Duracion tramo: "))
-        
-        if duracion_tramo == 0:
-            break
-            
-        tiempo_total += duracion_tramo
+horas=int(timpoT//60)
+minutos=int(timpoT%60)
 
-    # Convertir el tiempo total a horas y minutos
-    horas = tiempo_total // 60
-    minutos = tiempo_total % 60
-
-    print(f"Tiempo total de viaje: {horas}:{minutos:02d} horas")
-
-# Llamar a la función
-calcular_tiempo_viaje()
+print(f"el tiempo total de tu recorrido fue de {horas}:{minutos} horas")
