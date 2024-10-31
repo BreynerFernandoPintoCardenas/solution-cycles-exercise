@@ -1,13 +1,19 @@
-# Solicitar al usuario que ingrese un número entero
-numero = int(input("Ingrese un número: "))
+def calcular_tiempo_viaje():
+    tiempo_total = 0
 
-# Inicializar una lista para almacenar los divisores
-divisores = []
+    while True:
+        duracion_tramo = int(input("Duracion tramo: "))
+        
+        if duracion_tramo == 0:
+            break
+            
+        tiempo_total += duracion_tramo
 
-# Iterar desde 1 hasta el número ingresado (inclusive)
-for i in range(1, numero + 1):
-    if numero % i == 0:  # Comprobar si 'i' es un divisor de 'numero'
-        divisores.append(i)  # Agregar 'i' a la lista de divisores
+    # Convertir el tiempo total a horas y minutos
+    horas = tiempo_total // 60
+    minutos = tiempo_total % 60
 
-# Imprimir los divisores
-print("Los divisores son:", " ".join(map(str, divisores)))
+    print(f"Tiempo total de viaje: {horas}:{minutos:02d} horas")
+
+# Llamar a la función
+calcular_tiempo_viaje()
