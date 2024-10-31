@@ -1,10 +1,13 @@
-numeros=int(input("ingrese un numero: "))
-tipo=2
-numerosTwo=numeros+1
-i=1
+for j in range(1, 11):
+    print(f"{j:2}", end=" ")  
 
-for i in range(numerosTwo):
+for i in range(1, 11):
+    
+    print(f"{i:2}", end=" ")  
+    
+    for j in range(1, 11):
+        value = i * j  
+        print(f"{value:2}", end=" ")  
+    
+    print() 
 
-    value=(2**i)
-
-    print(value)
